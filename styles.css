@@ -42,19 +42,24 @@ body.wpp-privacy-enabled .message-out:hover {
 }
 
 /* ===========================================
-   ADDITIONAL PRIVACY ELEMENTS
-   Other WhatsApp elements that may contain sensitive info
+   CHAT HEADER BLUR (inside div#main)
+   Blurs the header showing current chat name and profile pic
    =========================================== */
 
-/* Blur contact/chat header name */
-body.wpp-privacy-enabled header span[dir="auto"][title] {
+/* Blur the entire header in the main chat area */
+body.wpp-privacy-enabled div#main > header {
   filter: blur(8px);
   transition: filter 0.2s ease-in-out;
 }
 
-body.wpp-privacy-enabled header span[dir="auto"][title]:hover {
+body.wpp-privacy-enabled div#main > header:hover {
   filter: blur(0);
 }
+
+/* ===========================================
+   ADDITIONAL PRIVACY ELEMENTS
+   Other WhatsApp elements that may contain sensitive info
+   =========================================== */
 
 /* Blur profile pictures in chat list */
 body.wpp-privacy-enabled div[aria-label="Chat list"] img {
