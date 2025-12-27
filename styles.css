@@ -17,6 +17,22 @@ body.wpp-privacy-enabled div[aria-label="Chat list"] > div > div:hover {
 }
 
 /* ===========================================
+   LOCKED CHATS LIST BLUR
+   Targets list items in Locked Chats (role="listitem")
+   =========================================== */
+
+/* Blur locked chat list items */
+body.wpp-privacy-enabled div[role="listitem"] {
+  filter: blur(8px);
+  transition: filter 0.2s ease-in-out;
+}
+
+/* Reveal on hover */
+body.wpp-privacy-enabled div[role="listitem"]:hover {
+  filter: blur(0);
+}
+
+/* ===========================================
    MESSAGE BLUR
    Targets message-in and message-out classes
    =========================================== */
