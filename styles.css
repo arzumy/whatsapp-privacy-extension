@@ -1,0 +1,105 @@
+/* WhatsApp Privacy Blur Styles */
+
+/* ===========================================
+   CHAT LIST BLUR
+   Targets child divs under div[aria-label="Chat list"]
+   =========================================== */
+
+/* When privacy mode is enabled, blur all chat list items */
+body.wpp-privacy-enabled div[aria-label="Chat list"] > div > div {
+  filter: blur(8px);
+  transition: filter 0.2s ease-in-out;
+}
+
+/* Reveal on hover */
+body.wpp-privacy-enabled div[aria-label="Chat list"] > div > div:hover {
+  filter: blur(0);
+}
+
+/* ===========================================
+   MESSAGE BLUR
+   Targets message-in and message-out classes
+   =========================================== */
+
+/* Blur incoming messages */
+body.wpp-privacy-enabled .message-in {
+  filter: blur(8px);
+  transition: filter 0.2s ease-in-out;
+}
+
+body.wpp-privacy-enabled .message-in:hover {
+  filter: blur(0);
+}
+
+/* Blur outgoing messages */
+body.wpp-privacy-enabled .message-out {
+  filter: blur(8px);
+  transition: filter 0.2s ease-in-out;
+}
+
+body.wpp-privacy-enabled .message-out:hover {
+  filter: blur(0);
+}
+
+/* ===========================================
+   ADDITIONAL PRIVACY ELEMENTS
+   Other WhatsApp elements that may contain sensitive info
+   =========================================== */
+
+/* Blur contact/chat header name */
+body.wpp-privacy-enabled header span[dir="auto"][title] {
+  filter: blur(8px);
+  transition: filter 0.2s ease-in-out;
+}
+
+body.wpp-privacy-enabled header span[dir="auto"][title]:hover {
+  filter: blur(0);
+}
+
+/* Blur profile pictures in chat list */
+body.wpp-privacy-enabled div[aria-label="Chat list"] img {
+  filter: blur(8px);
+  transition: filter 0.2s ease-in-out;
+}
+
+body.wpp-privacy-enabled div[aria-label="Chat list"] img:hover {
+  filter: blur(0);
+}
+
+/* Blur the last message preview in chat list */
+body.wpp-privacy-enabled div[aria-label="Chat list"] span[title] {
+  filter: blur(8px);
+  transition: filter 0.2s ease-in-out;
+}
+
+body.wpp-privacy-enabled div[aria-label="Chat list"] span[title]:hover {
+  filter: blur(0);
+}
+
+/* ===========================================
+   PRIVACY INDICATOR
+   Shows when privacy mode is active
+   =========================================== */
+
+.wpp-privacy-indicator {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: rgba(37, 211, 102, 0.9);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  z-index: 99999;
+  display: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+body.wpp-privacy-enabled .wpp-privacy-indicator {
+  display: block;
+}
+
+.wpp-privacy-indicator::before {
+  content: "🔒 ";
+}
