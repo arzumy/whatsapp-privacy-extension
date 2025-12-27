@@ -191,7 +191,7 @@ This extension provides a **visual privacy layer** for WhatsApp Web. It prevents
 
 ## 🤖 Development
 
-This project was built with AI-assisted development tools. The codebase and documentation were developed to provide a simple, effective privacy solution for WhatsApp Web users.
+This project was **100% built with [Claude AI](https://claude.ai) and [Cursor](https://cursor.sh)**. The entire codebase, documentation, and architecture were developed through AI-assisted pair programming to provide a simple, effective privacy solution for WhatsApp Web users.
 
 ---
 
