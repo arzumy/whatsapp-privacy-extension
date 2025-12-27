@@ -20,6 +20,7 @@ A Chrome extension that adds a privacy blur effect to WhatsApp Web. When enabled
 4. Click **Load unpacked**
 5. Select the `whatsapp-privacy-extension` folder
 6. The extension icon should appear in your toolbar
+7. Reload the [WhatsApp Web](https://web.whatsapp.com) tab or restart the browser
 
 ## Usage
 
