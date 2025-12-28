@@ -73,31 +73,6 @@ body.wpp-privacy-enabled div#main > header:hover {
 }
 
 /* ===========================================
-   ADDITIONAL PRIVACY ELEMENTS
-   Other WhatsApp elements that may contain sensitive info
-   =========================================== */
-
-/* Blur profile pictures in chat list */
-body.wpp-privacy-enabled div[aria-label="Chat list"] img {
-  filter: blur(8px);
-  transition: filter 0.2s ease-in-out;
-}
-
-body.wpp-privacy-enabled div[aria-label="Chat list"] img:hover {
-  filter: blur(0);
-}
-
-/* Blur the last message preview in chat list */
-body.wpp-privacy-enabled div[aria-label="Chat list"] span[title] {
-  filter: blur(8px);
-  transition: filter 0.2s ease-in-out;
-}
-
-body.wpp-privacy-enabled div[aria-label="Chat list"] span[title]:hover {
-  filter: blur(0);
-}
-
-/* ===========================================
    PRIVACY INDICATOR
    Shows when privacy mode is active
    =========================================== */
